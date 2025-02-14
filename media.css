@@ -1,6 +1,95 @@
 @media (max-width: 1400px) {}
 @media (max-width: 1200px) {}
 @media (max-width: 992px) {}
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+
+    .header__link svg {
+        height: calc(35px + 15 * ((100vw - 320px) / (768 - 320)));
+    }
+    .header-name__label,
+    .header-nav__link {
+        font-size: calc(1rem + 0.25 * ((100vw - 20rem) / (48 - 20)));
+    }
+    .header-name__slogan {
+        font-size: calc(0.625rem + 0.125 * ((100vw - 20rem) / (48 - 20)));
+    }
+
+    .header__nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        overflow: auto;
+        transition: 0.4s;
+        transform: translateX(-100%);
+        z-index: 8;
+    }
+    .header__nav.active {
+        transform: translateX(100%);
+    }
+    .header__control {
+        display: none;
+    }
+    .header__burger {
+        display: block;
+        width: calc(30px + 15 * ((100vw - 320px) / (768 - 320)));
+        height: calc(20px + 10 * ((100vw - 320px) / (768 - 320)));
+        position: relative;
+        z-index: 10;
+    }
+    .header__burger::before,
+    .header__burger::after,
+    .header__burger span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #fff;
+        transition: 0.4s;
+    }
+    .header__burger::before,
+    .header__burger::after {
+        content: '';
+    }
+    .header__burger::before {
+        top: 0;
+    }
+    .header__burger::after {
+        bottom: 0;
+    }
+    .header__burger span {
+        top: calc(50% + -1px);
+        transform: scale(1);
+    }
+    .header__burger.active::before {
+        top: 50%;
+        transform: rotateZ(-45deg)
+                   translateY(-50%);
+    }
+    .header__burger.active::after {
+        bottom: 50%;
+        transform: rotateZ(45deg)
+                   translateY(50%)
+    }
+    .header__burger.active span {
+        transform: scale(0)
+                   translateY(-50%);
+    }
+    .header-nav__list {
+        padding: calc(80px + 24 * ((100vw - 320px) / (768 - 320)))
+                 calc(20px + 22.4 * ((100vw - 320px) / (768 - 320)))
+                 0;
+        flex-flow: column;
+        gap: 16px;
+    }
+    .nav__item-control {
+        display: initial;
+    }
+    .header-nav__item:nth-last-child(2) {
+        margin-bottom: 16px;
+    }
+}
 @media (max-width: 576px) {}
 @media (max-width: 480px) {}
