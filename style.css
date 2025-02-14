@@ -41,7 +41,8 @@ input {
 :root {
     --font-family: 'Roboto Regular', sans-serif;
     --second-family: 'Roboto Bold', sans-serif;
-    --third-family: Viga;
+    --third-family: Viga, sans-serif;
+    --padding-top-hero: calc(59px + 37 * ((100vw - 320px) / (1920 - 320)));
 }
 
 html {
@@ -51,6 +52,10 @@ body {
     background: #000;
     font-family: var(--font-family);
     color: #fff;
+}
+.container {
+    padding: 0 calc(20px + 80 * ((100vw - 320px) / (1920 - 320)));
+    max-width: 1920px;
 }
 
 /* ======= HEADER ======= */
@@ -81,9 +86,7 @@ body {
 }
 .header .container {
     margin: 0 auto;
-    padding: calc(20px + 33 * ((100vw - 320px) / (1920 - 320))) 
-             calc(20px + 80 * ((100vw - 320px) / (1920 - 320))) 
-             0;
+    padding-top: calc(20px + 33 * ((100vw - 320px) / (1920 - 320)));
     max-width: 1920px;
 }
 .header__container {
@@ -102,7 +105,7 @@ body {
 }
 .header-name__label {
     font-size: 1.25rem;
-    line-height: 1.5;
+    line-height: 1.45;
     letter-spacing: 0.25em;
 }
 .header-name__slogan {
@@ -136,8 +139,35 @@ body {
 
 /* ======= HERO ======= */
 
-.main-title {
-    /* font-size: calc(20px + (80) * ((100vw - 320px) / (1920 - 320))); */
+.hero {
+    padding-top: var(--padding-top-hero);
+    min-height: 100vh;
+    background: url(./img/1873\ 1.jpg) center top / cover no-repeat;
+}
+.hero .container {
+    padding-top: calc(347px - var(--padding-top-hero));
+}
+.hero__slogan {
+    /* 1.25rem */
+    font: 1.5625rem
+          var(--second-family);
+}
+.hero__main-title {
+    /* 4.5rem 10.625rem */
+    font-size: calc(4.5rem + 6.125 * ((100vw - 20rem) / (120 - 20)));
+}
+.hero__desc {
+    /* 1.125rem 1.25rem */
+    margin-bottom: 20px;
+    max-width: 515px;
+    font-size: calc(1.125rem + 0.125 * ((100vw - 20rem) / (120 - 20)));
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.7);
+}
+.hero__link {
+    /* 1.375rem 1.4375rem */
+    font-size: calc(1.375rem + 0.0625 * ((100vw - 20rem) / (120 - 20)));
+    line-height: 1.30435;
 }
 
 /* ======= /HERO ======= */
