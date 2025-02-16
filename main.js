@@ -15,3 +15,13 @@ function addNavMenu() {
 function toggleActiveClass(element) {
     element.classList.toggle('active');
 }
+
+const swiper = new Swiper ('.swiper', {
+    navigation: {
+        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next'
+    },
+    autoHeight: true,
+    simulateTouch: false,
+    touchRadio: 0,
+})
