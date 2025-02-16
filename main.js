@@ -24,4 +24,5 @@ const swiper = new Swiper ('.swiper', {
     autoHeight: true,
     simulateTouch: false,
     touchRadio: 0,
+    loop: true,
 })
