@@ -25,4 +25,9 @@ const swiper = new Swiper ('.swiper', {
     simulateTouch: false,
     touchRadio: 0,
     loop: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    speed: 800,
 })
