@@ -154,7 +154,7 @@ body.lock {
 .hero .container {
     padding-top: calc(60px + 191 * (100vw - 320px) / (1920 - 320));
     padding-bottom: var(--padding-upright-container);
-    height: 100%;
+    min-height: inherit;
 }
 .hero__container {
     display: flex;
