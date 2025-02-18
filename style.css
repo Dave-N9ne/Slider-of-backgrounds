@@ -83,16 +83,6 @@ body.lock {
     width: 100%;
     z-index: 50;
 }
-/* .header::before { */
-    /* content: ''; */
-    /* position: absolute; */
-    /* top: 0; */
-    /* left: 0; */
-    /* width: 100%; */
-    /* height: 100%; */
-    /* background: rgba(0, 0, 0, 0.3); */
-    /* z-index: 2; */
-/* } */
 .header__container,
 .header__logo,
 .header__name,
@@ -126,7 +116,7 @@ body.lock {
 }
 .header-name__slogan {
     font-size: 0.75rem;
-    /* line-height: 2.5; */
+    /*^ line-height: 2.5; */
     letter-spacing: 0.01em;
     color: rgba(255, 255, 255, 0.5);
 }
@@ -173,18 +163,15 @@ body.lock {
     gap: 30px;
 }
 .hero__slogan {
-    /* 1.25rem */
     font: 1.5625rem
           var(--second-family);
 }
 .hero__main-title {
-    /* 4.5rem 10.625rem */
     display: inline-block;
     font: calc(4.5rem + 6.125 * ((100vw - 20rem) / (120 - 20)))
           var(--third-family);
 }
 .hero__desc {
-    /* 1.125rem 1.25rem */
     margin-bottom: 20px;
     max-width: 515px;
     font-size: calc(1.125rem + 0.125 * ((100vw - 20rem) / (120 - 20)));
@@ -192,7 +179,6 @@ body.lock {
     color: rgba(255, 255, 255, 0.7);
 }
 .hero__link {
-    /* 1.375rem 1.4375rem */
     font-size: calc(1.375rem + 0.0625 * ((100vw - 20rem) / (120 - 20)));
     line-height: 1.30435;
     display: flex;
@@ -217,6 +203,7 @@ body.lock {
     inset: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
     z-index: -1;
 }
 .swiper-button-next,
@@ -227,3 +214,5 @@ body.lock {
 .swiper-button-next::after {
     display: none;
 }
+
+/* ======= /SWIPER ======= */
