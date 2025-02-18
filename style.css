@@ -149,7 +149,7 @@ body.lock {
 
 .hero {
     padding-top: var(--padding-top-hero);
-    height: 100vh;
+    min-height: 100vh;
 }
 .hero .container {
     padding-top: calc(60px + 191 * (100vw - 320px) / (1920 - 320));
