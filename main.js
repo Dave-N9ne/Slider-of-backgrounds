@@ -16,18 +16,22 @@ function toggleActiveClass(element) {
     element.classList.toggle('active');
 }
 
-const swiper = new Swiper ('.swiper', {
-    navigation: {
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next'
-    },
-    autoHeight: true,
-    simulateTouch: false,
-    touchRadio: 0,
-    loop: true,
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-    },
-    speed: 800,
-})
+addSliders();
+
+function addSliders() {
+    const swiper = new Swiper('.swiper', {
+        navigation: {
+            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next'
+        },
+        autoHeight: true,
+        simulateTouch: false,
+        touchRadio: 0,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        speed: 1000,
+    })
+}
