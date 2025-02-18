@@ -34,4 +34,10 @@ function addSliders() {
         },
         speed: 1000,
     })
+    const swiperOfBackgrounds = new Swiper('.swiper-backgrounds', {
+        loop: true,
+    })
+    
+    swiperOfBackgrounds.controller.control = swiper;
+    swiper.controller.control = swiperOfBackgrounds;
 }
